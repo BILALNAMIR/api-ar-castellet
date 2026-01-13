@@ -73,11 +73,11 @@ app.get("/novapartida", async (req, res) => {
 
 
 
-//INICIAR SERVIDOR
-app.listen(3000, () => {
-  console.log('Servidor escoltant al port 3000')
-})
-
+// INICIAR SERVIDOR
+const PORT = process.env.PORT || 3000; // Utilitza el port de Render o el 3000 en local
+app.listen(PORT, () => {
+  console.log(`Servidor escoltant al port ${PORT}`);
+});
 
 
 
